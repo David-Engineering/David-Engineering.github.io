@@ -22,3 +22,26 @@ document.querySelectorAll('.project-details').forEach(button => button.addEventL
   copy.textContent = data[1];
   dialog.showModal();
 }));
+
+
+/* Highlight the section currently in view. */
+const sectionLinks = [...nav.querySelectorAll('a[href^="#"]')];
+const sections = sectionLinks
+  .map(link => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+if ('IntersectionObserver' in window) {
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      sectionLinks.forEach(link => {
+        if (link.getAttribute('href') === '#' + entry.target.id) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    });
+  }, { rootMargin: '-25% 0px -60% 0px', threshold: 0 });
+  sections.forEach(section => sectionObserver.observe(section));
+}
