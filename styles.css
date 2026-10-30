@@ -118,3 +118,15 @@
 .design-rationale { margin-top:20px; padding:18px 20px; border-left:2px solid var(--blue); background:#122235; }
 .design-rationale h5 { margin:5px 0 7px; font-size:15px; }
 .design-rationale>p:last-child { margin:0; max-width:850px; color:var(--muted); font-size:12px; line-height:1.8; }
+
+/* VEX engineering iteration case study */
+.iteration-case-study { margin:26px 0; padding:24px; border:1px solid #2a4560; background:linear-gradient(140deg,#101f2e,#0b141f); }
+.iteration-case-study>h4 { margin:5px 0 20px; font-size:22px; }
+.iteration-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.iteration-grid article { padding:18px; background:#0b1521; border:1px solid var(--line); }
+.iteration-label { font:9px var(--mono); color:var(--blue); letter-spacing:1px; }
+.iteration-grid h5 { margin:13px 0 8px; font-size:14px; }
+.iteration-grid p { margin:0; color:var(--muted); font-size:11px; line-height:1.8; }
+.iteration-takeaway { margin:18px 0 0; padding-top:15px; border-top:1px solid var(--line); color:#b8c9db; font-size:12px; line-height:1.8; }
+.iteration-takeaway strong { color:#fff; }
+@media(max-width:760px) { .iteration-grid { grid-template-columns:1fr; } }
