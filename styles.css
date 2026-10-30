@@ -130,3 +130,13 @@
 .iteration-takeaway { margin:18px 0 0; padding-top:15px; border-top:1px solid var(--line); color:#b8c9db; font-size:12px; line-height:1.8; }
 .iteration-takeaway strong { color:#fff; }
 @media(max-width:760px) { .iteration-grid { grid-template-columns:1fr; } }
+
+
+/* Contact links */
+.contact-methods { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:28px 0 20px; }
+.contact-method { display:flex; flex-direction:column; align-items:flex-start; gap:10px; min-width:0; padding:22px; background:var(--panel); border:1px solid var(--line); color:var(--text); text-decoration:none; transition:border-color .2s, transform .2s; }
+a.contact-method:hover { border-color:#3a6fa9; transform:translateY(-3px); }
+.contact-method-label { color:var(--blue); font:9px var(--mono); letter-spacing:1px; }
+.contact-method strong { font-size:16px; overflow-wrap:anywhere; }
+.contact-method-action { color:var(--muted); font-size:12px; }
+@media(max-width:760px) { .contact-methods { grid-template-columns:1fr; } }
