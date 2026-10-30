@@ -67,3 +67,34 @@
         height: 240px;
     }
 }
+
+
+/* Portfolio refinement — clearer hierarchy, stronger project storytelling */
+.section-heading { align-items: end; }
+.section-heading > p { line-height: 1.8; }
+.project-card.featured { border-color: #315273; box-shadow: 0 18px 55px #0005; }
+.project-card.featured .project-body { display: flex; flex-direction: column; justify-content: center; }
+.notebook-callout { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:22px; padding:17px; border:1px solid #2c4967; background:linear-gradient(110deg,#112238,#0b141f); }
+.notebook-callout h4 { margin:3px 0 5px; font-size:17px; }
+.notebook-callout p:not(.card-kicker) { margin:0; color:var(--muted); font-size:11px; }
+.notebook-callout .card-kicker { margin:0; font-size:8px; }
+.notebook-callout .button { flex-shrink:0; white-space:nowrap; }
+.cad-software-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:30px 0 20px; }
+.cad-software-card { min-width:0; padding:28px; background:var(--panel); border:1px solid var(--line); position:relative; overflow:hidden; }
+.cad-software-card:after { content:""; position:absolute; width:130px; height:130px; right:-65px; bottom:-65px; border:1px solid #398dff35; transform:rotate(45deg); }
+.software-index,.software-focus { font:9px var(--mono); letter-spacing:1.5px; color:var(--blue); }
+.cad-software-card h3 { margin:18px 0 8px; font-size:24px; }
+.cad-software-card p { max-width:460px; color:var(--muted); font-size:13px; }
+.software-focus { display:block; margin-top:22px; color:#8da9c7; font-size:8px; }
+.cad-feature { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--line); background:var(--panel); }
+.cad-feature-art { min-height:270px; position:relative; overflow:hidden; background-color:#0c1724; background-image:linear-gradient(#34516b35 1px,transparent 1px),linear-gradient(90deg,#34516b35 1px,transparent 1px); background-size:24px 24px; }
+.cad-feature-lines { position:absolute; inset:18% 20%; border:2px solid #398dff99; transform:perspective(500px) rotateX(58deg) rotateZ(-30deg); box-shadow:18px 18px 0 -2px #398dff18,36px 36px 0 -2px #398dff12; }
+.cad-feature-copy { padding:30px; align-self:center; }
+.cad-feature-copy h3 { font-size:22px; margin:7px 0; }
+.cad-feature-copy>p:not(.card-kicker):not(.note) { color:var(--muted); font-size:13px; }
+.contact-note { color:var(--muted); font-size:13px; }
+@media(max-width:760px) {
+  .notebook-callout { align-items:flex-start; flex-direction:column; }
+  .cad-software-grid,.cad-feature { grid-template-columns:1fr; }
+  .cad-feature-art { min-height:210px; }
+}
