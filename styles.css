@@ -140,3 +140,19 @@ a.contact-method:hover { border-color:#3a6fa9; transform:translateY(-3px); }
 .contact-method strong { font-size:16px; overflow-wrap:anywhere; }
 .contact-method-action { color:var(--muted); font-size:12px; }
 @media(max-width:760px) { .contact-methods { grid-template-columns:1fr; } }
+
+
+/* Accessibility and interaction polish */
+:focus-visible { outline:2px solid #79b5ff; outline-offset:4px; }
+.skip-link { position:fixed; top:10px; left:10px; z-index:100; padding:10px 14px; background:var(--text); color:var(--bg); transform:translateY(-160%); }
+.skip-link:focus { transform:translateY(0); }
+.site-header nav a { position:relative; transition:color .2s ease; }
+.site-header nav a:hover,.site-header nav a[aria-current="location"] { color:#79b5ff; }
+.site-header nav a[aria-current="location"]::after { content:""; position:absolute; left:0; right:0; bottom:-9px; height:2px; background:var(--blue); }
+.project-photo-grid img { transition:transform .35s ease, filter .35s ease; }
+.project-photo-grid figure:hover img { transform:scale(1.035); filter:brightness(1.08); }
+button,.button { transition:transform .2s ease, border-color .2s ease, background-color .2s ease; }
+button:focus-visible,.button:focus-visible { outline-offset:4px; }
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
