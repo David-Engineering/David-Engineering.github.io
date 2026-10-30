@@ -174,3 +174,33 @@ button:focus-visible,.button:focus-visible { outline-offset:4px; }
 .mechanism-note { margin:20px 0 0; padding:14px 16px; border:1px solid #263c51; background:#0b1724; color:#b8d5f3; font:10px var(--mono); letter-spacing:.35px; line-height:1.8; text-align:center; }
 @media(max-width:900px) { .mechanism-stages { grid-template-columns:1fr; } .mechanism-stage { display:grid; grid-template-columns:40px minmax(0,1fr); column-gap:15px; row-gap:0; padding:18px; } .mechanism-stage>div { min-width:0; } .mechanism-stage .stage-function { grid-column:2; margin-top:8px; padding-top:0; } }
 @media(max-width:480px) { .mechanism-breakdown { padding:16px; } .mechanism-heading { text-align:left; } .mechanism-heading>p:last-child { margin:0; } .mechanism-stage { grid-template-columns:32px minmax(0,1fr); gap:12px; padding:16px 12px; } .stage-number { width:30px; height:30px; } .mechanism-note { text-align:left; } }
+
+
+/* Esports profile: clearer hierarchy for rank, competition, and team leadership. */
+.esports-section{align-items:start}
+.esports-copy{min-width:0}
+.esports-copy>.eyebrow{margin-bottom:10px}
+.esports-copy>.section-copy{line-height:1.8;max-width:720px}
+.rank-ring strong{font-size:clamp(32px,4vw,44px);letter-spacing:-1px}
+.esports-stats{align-items:stretch}
+.esports-stats div{padding:12px 10px;border:1px solid var(--line);border-left:2px solid var(--blue);background:linear-gradient(135deg,#101b29,#0b1119)}
+.esports-stats strong{font-size:clamp(11px,1.1vw,14px);line-height:1.5;margin-bottom:5px}
+.esports-stats span{font-size:10px;line-height:1.5}
+.esports-copy .small-heading{margin:24px 0 10px}
+.resume-list li{align-items:flex-start;line-height:1.6;padding:12px 0}
+.resume-list li span{max-width:58%;font-size:10px;line-height:1.6}
+.esports-transfer{margin-top:24px;padding:18px 20px;border:1px solid #28405a;background:linear-gradient(120deg,#101d2c,#0b1119)}
+.esports-transfer .small-heading{margin:0 0 8px}
+.esports-transfer p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+@media(max-width:900px){
+  .esports-section{grid-template-columns:1fr;gap:28px}
+  .esports-art{height:280px}
+  .esports-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .esports-stats{grid-template-columns:1fr;gap:8px}
+  .esports-stats div{padding:11px 13px}
+  .resume-list li{display:block}
+  .resume-list li span{display:block;max-width:none;text-align:left;margin-top:3px}
+  .esports-transfer{padding:15px}
+}
