@@ -113,3 +113,8 @@
 .stage-function { display:inline-block; margin-top:14px; color:#8da9c7; font:8px var(--mono); letter-spacing:1px; }
 .mechanism-note { margin:18px 0 0; padding-top:14px; border-top:1px solid var(--line); color:#a8c3df; font:9px var(--mono); letter-spacing:.7px; }
 @media(max-width:760px) { .mechanism-stages { grid-template-columns:1fr; } }
+
+
+.design-rationale { margin-top:20px; padding:18px 20px; border-left:2px solid var(--blue); background:#122235; }
+.design-rationale h5 { margin:5px 0 7px; font-size:15px; }
+.design-rationale>p:last-child { margin:0; max-width:850px; color:var(--muted); font-size:12px; line-height:1.8; }
