@@ -98,3 +98,18 @@
   .cad-software-grid,.cad-feature { grid-template-columns:1fr; }
   .cad-feature-art { min-height:210px; }
 }
+
+
+/* VEX 22603A mechanism case study */
+.mechanism-breakdown { margin:30px 0 8px; padding:24px; border:1px solid var(--line); background:#0b1521; }
+.mechanism-heading { max-width:700px; margin-bottom:20px; }
+.mechanism-heading h4 { margin:5px 0 8px; font-size:21px; }
+.mechanism-heading>p:last-child { color:var(--muted); font-size:12px; }
+.mechanism-stages { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.mechanism-stage { display:flex; gap:13px; padding:17px 14px; border:1px solid #263b50; background:#101e2c; }
+.stage-number { flex:0 0 auto; color:var(--blue); font:11px var(--mono); padding-top:3px; }
+.mechanism-stage h5 { margin:0 0 7px; font-size:14px; }
+.mechanism-stage p { margin:0; color:var(--muted); font-size:11px; line-height:1.7; }
+.stage-function { display:inline-block; margin-top:14px; color:#8da9c7; font:8px var(--mono); letter-spacing:1px; }
+.mechanism-note { margin:18px 0 0; padding-top:14px; border-top:1px solid var(--line); color:#a8c3df; font:9px var(--mono); letter-spacing:.7px; }
+@media(max-width:760px) { .mechanism-stages { grid-template-columns:1fr; } }
