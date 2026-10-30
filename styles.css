@@ -4,54 +4,66 @@
 @media(max-width:900px){.site-header nav{gap:12px}.site-header nav a{font-size:9px}.hero{grid-template-columns:1fr 1fr}.section{padding-left:5vw;padding-right:5vw}.project-grid{grid-template-columns:1fr 1fr}.project-card:last-child{grid-column:span 2}.skill-grid{grid-template-columns:1fr 1fr}.skill-grid article:nth-child(2){border-right:0}.skill-grid article:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media(max-width:650px){.site-header{height:70px;padding:0 5vw}.menu-toggle{display:block}.site-header nav{display:none;position:absolute;top:69px;left:0;right:0;background:#080c11;border-bottom:1px solid var(--line);padding:18px 5vw;flex-direction:column;gap:16px}.site-header nav.open{display:flex}.site-header nav a{font-size:12px}.hero{grid-template-columns:1fr;padding-top:65px}.hero-art{min-height:290px}.hero h1{font-size:48px}.section{padding:68px 6vw}.section-heading{display:block}.section-heading>p{margin-top:15px}.project-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto}.split-section,.esports-section,.about-section{grid-template-columns:1fr;gap:35px}.cad-board{height:260px}.skill-grid{grid-template-columns:1fr 1fr}.skill-grid article{padding:18px 14px}.esports-art{height:290px}.esports-stats{gap:7px}.esports-stats strong{font-size:10px}.resume-list li{font-size:10px}footer{flex-wrap:wrap}footer>span{order:3;width:100%}}
 /* VEX project photo gallery layout fix */
-.project-photo-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px;
+/* VEX FEATURED PROJECT LAYOUT FIX */
+
+.project-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 260px;
-    padding: 10px;
+    min-width: 0;
     overflow: hidden;
-    background: #080c11;
 }
 
-.project-photo-grid figure {
-    position: relative;
-    display: block;
+.project-card.featured .project-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 340px;
+    min-width: 0;
+    gap: 8px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.project-card.featured figure {
     width: 100%;
     height: 100%;
     min-width: 0;
-    min-height: 0;
     margin: 0;
     overflow: hidden;
 }
 
-.project-photo-grid img {
+.project-card.featured img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
 }
 
-.project-photo-grid figcaption {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    padding: 5px;
-    background: rgba(8, 12, 17, 0.9);
-    font-size: 9px;
-    text-align: center;
+.project-card.featured .project-body {
+    min-width: 0;
+    padding: 28px;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 900px) {
+    .project-card.featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card.featured .project-photo-grid {
+        height: 300px;
+    }
 }
 
 @media (max-width: 650px) {
-    .project-photo-grid {
+    .project-card.featured .project-photo-grid {
+        grid-template-columns: 1fr;
         height: auto;
-        grid-template-columns: 1fr !important;
     }
 
-    .project-photo-grid figure {
-        height: 220px;
+    .project-card.featured figure {
+        height: 240px;
     }
 }
